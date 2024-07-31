@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: linear-gradient(to right, #011e36, #2d8ca8);
+}
+
+.card:hover {
+  color: rgba(88, 199, 250, 100%);
+  transition: color 1s;
+}
+.card:hover:before,
+.card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+body {
+  @apply m-0 p-0;
+}
+
+#wish {
+  @apply h-[2px] w-[100px] bg-white opacity-0 absolute filter drop-shadow-[0_0_6px_white];
+  background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+}
