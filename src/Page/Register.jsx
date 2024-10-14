@@ -74,7 +74,7 @@ const Register = () => {
       <div className="max-w-5xl mx-auto relative">
         <div className=" text-white flex min-h-screen flex-col items-center pt-16 sm:justify-center sm:pt-0">
           {error && <ErrorAlert message={error} onClose={() => setError('')} />}
-          {success && <SuccessAlert message="Account created successfully!" onClose={() => setSuccess(false)} />}
+          {success && <SuccessAlert message="Akun berhasil dibuat!" onClose={() => setSuccess(false)} />}
           <FormLayout title="Register" subtitle="Create your account">
             <form className="p-6 pt-0" onSubmit={handleRegister}>
               <Input
