@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import React from "react";
 
 const Alert = ({ message, type }) => {
   const alertType = type === "success" 
@@ -11,11 +11,6 @@ const Alert = ({ message, type }) => {
       <p>{message}</p>
     </div>
   );
-};
-
-Alert.propTypes = {
-  message: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
 };
 
 export default Alert;

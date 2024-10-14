@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Elements/Button";
 
 const AnimationTyping = () => {
@@ -7,7 +7,6 @@ const AnimationTyping = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(100);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const textArray = [
     "Oops! Page not found...",
     "Something seems wrong...",

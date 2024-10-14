@@ -2,6 +2,8 @@ import StarrySky from "../Animation/StarrSky";
 import Anime from "../Animation/anime";
 import Img from "../components/Elements/Img";
 import Button from "../components/Elements/Button";
+import React from "react";
+
 const Result = ({ score, totalAnswers, wrongAnswers }) => {
   return (
     <div className="font-mono">
@@ -31,8 +33,8 @@ const Result = ({ score, totalAnswers, wrongAnswers }) => {
             </p>
             <div className="flex justify-center items-center  my-5">
               <Button
-                text="Play Again"
-                className="hover:text-black text-white border-2 border-white rounded-full px-4 py-2 hover:bg-white"
+                label="Play Again"
+                className="hover:text-black text-white border-2 border-white rounded-full px-4 py-2 hover:bg-white mx-auto max-w-xs"
                 onClick={() => window.location.reload()}
               />
             </div>

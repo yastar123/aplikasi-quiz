@@ -1,3 +1,5 @@
+import React from "react";
+
 const ProgressBar = ({ progress }) => {
   return (
     <div className="w-full bg-gray-300 rounded overflow-hidden mt-16 ">

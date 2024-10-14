@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import Img from "../Elements/Img";
+import React from "react";
 
 const SocialButton = ({ imgSrc, altText }) => (
   <div
@@ -9,10 +9,5 @@ const SocialButton = ({ imgSrc, altText }) => (
     <Img src={imgSrc} alt={altText} className="w-5" />
   </div>
 );
-
-SocialButton.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  altText: PropTypes.string.isRequired,
-};
 
 export default SocialButton;

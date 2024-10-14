@@ -8,6 +8,7 @@ import { Book } from "lucide-react";
 import Result from "./Result";
 import Loading from "./Loading";
 import withAuth from "../hooks/Otentikasi";
+import React from "react";
 
 
 
@@ -21,12 +22,9 @@ const Quiz = () => {
   const [wrongAnswers, setWrongAnswers] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
-
-
   useEffect(() => {
     getQuiz((data) => {
       setQuizData(data);
-      console.log("Quiz data loaded:", data);
     });
 
     const savedState = localStorage.getItem("quizState");
@@ -47,7 +45,6 @@ const Quiz = () => {
       setTimeLeft(savedTimeLeft);
       setTotalAnswers(savedTotalAnswers);
       setWrongAnswers(savedWrongAnswers);
-      console.log("Restored state from localStorage:", savedState);
     }
   }, []);
 
@@ -60,7 +57,6 @@ const Quiz = () => {
     } else if (timeLeft === 0 && !showResults) {
       setShowResults(true);
       localStorage.removeItem("quizState");
-      console.log("Time is up, showing results.");
     }
   }, [timeLeft, showResults]);
 
@@ -68,7 +64,6 @@ const Quiz = () => {
     if (currentQuestionIndex >= quizData.length && quizData.length > 0) {
       setShowResults(true);
       localStorage.removeItem("quizState");
-      console.log("All questions answered, showing results.");
     } else if (quizData.length > 0) {
       const quizState = {
         savedQuizData: quizData,
@@ -80,7 +75,6 @@ const Quiz = () => {
         savedWrongAnswers: wrongAnswers,
       };
       localStorage.setItem("quizState", JSON.stringify(quizState));
-      console.log("State saved to localStorage:", quizState);
     }
   }, [
     currentQuestionIndex,

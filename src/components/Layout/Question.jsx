@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
-
+import React from "react";
 import Loading from "../../Page/Loading";
+
 const Question = ({ question, handleAnswer }) => {
   
   if (!question) {

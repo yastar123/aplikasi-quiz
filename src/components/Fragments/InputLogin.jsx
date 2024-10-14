@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import Input from "../Elements/Input";
+import React from "react";
 
 const InputLogin = ({ placeholder, text, className, value, onChange }) => {
   return (
@@ -14,14 +14,6 @@ const InputLogin = ({ placeholder, text, className, value, onChange }) => {
       />
     </div>
   );
-};
-
-InputLogin.propTypes = {
-  placeholder: PropTypes.string,
-  text: PropTypes.string,
-  className: PropTypes.string,
-  value: PropTypes.string,
-  onChange: PropTypes.func,
 };
 
 export default InputLogin;

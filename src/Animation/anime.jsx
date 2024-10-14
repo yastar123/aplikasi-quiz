@@ -1,10 +1,9 @@
-// Import necessary libraries
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
 import StarrySky from "./StarrSky";
 
+
 const Anime = () => {
-  // Define wave paths
   const wave1 =
       "M0 43.3224L50 45.7294C100 48.1364 200 52.9494 300 67.3904C400 81.8314 500 105.9 600 98.679C700 91.458 800 52.9494 900 43.3224C1000 33.6954 1100 52.9494 1150 62.5764L1200 72.203V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V43.3224Z",
     wave2 =
@@ -14,7 +13,6 @@ const Anime = () => {
     wave4 =
       "M0 50L50 44.4444C100 38.8888 200 27.7776 300 38.8888C400 50 500 83.3336 600 94.4448C700 105.556 800 94.4448 900 91.6664C1000 88.888 1100 94.4448 1150 97.2224L1200 100V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V50Z";
 
-  // Use useEffect to animate the wave paths on component mount
   useEffect(() => {
     anime({
       targets: ".wave-top path",
