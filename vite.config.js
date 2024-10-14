@@ -6,5 +6,11 @@ export default defineConfig({
   define: {
     'process.env': {}
   },
-  "build": "react-scripts build",
+  build: {
+    rollupOptions: {
+      output: {
+        sourcemap: false,
+      },
+    },
+  },
 });
