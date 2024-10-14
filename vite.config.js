@@ -5,5 +5,6 @@ export default defineConfig({
   plugins: [nodePolyfills()],
   define: {
     'process.env': {}
-  }
+  },
+  "build": "react-scripts build",
 });
