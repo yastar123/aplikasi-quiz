@@ -1,7 +1,7 @@
 import React from "react";
 
 const ErrorAlert = ({ message, onClose }) => (
-    <div className="border bg-black border-red-400 text-red-700 px-16 text-center items-center py-5 rounded relative" role="alert">
+    <div className="border mx-auto max-w-xs md:max-w-lg bg-black border-red-400 text-red-700 px-16 text-center items-center py-5 rounded relative" role="alert">
         <strong className="font-bold">Error: </strong>
         <span className="block sm:inline">{message}</span>
         <button onClick={onClose} className="absolute top-0 bottom-0 right-0 px-4 flex items-center">

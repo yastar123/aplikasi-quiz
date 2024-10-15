@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "animejs": "^3.2.2",
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
+    "buffer": "^6.0.3",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",

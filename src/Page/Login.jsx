@@ -28,14 +28,13 @@ const Login = () => {
   const handleSubmitLogin = (event) => {
     event.preventDefault();
     const { email, password } = formData;
-
+    
     const auth = getAuth();
     setError('');
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-
         navigate("/quiz");
       })
       .catch((error) => {
