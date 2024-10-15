@@ -7,7 +7,6 @@ import Anime from "../Animation/anime";
 import { Book } from "lucide-react";
 import Result from "./Result";
 import Loading from "./Loading";
-import withAuth from "../hooks/Otentikasi";
 import React from "react";
 
 
@@ -156,4 +155,4 @@ const Quiz = () => {
   );
 };
 
-export default withAuth(Quiz);
+export default Quiz;
